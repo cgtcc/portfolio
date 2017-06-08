@@ -29,7 +29,7 @@ class WorksController < ApplicationController
   # PATCH/PUT /works/1
   # PATCH/PUT /works/1.json
   def update
-        @work_item = Work.find(params[:id])
+    @work_item = Work.find(params[:id])
 
     respond_to do |format|
       if @work_item.update(params.require(:work).permit(:title, :subtitle, :body))
@@ -43,6 +43,22 @@ class WorksController < ApplicationController
   def show
      @work_item = Work.find(params[:id])
   end
+
+
+
+ 
+  def destroy
+    #perform the lookup
+    @work_item = Work.find(params[:id])
+    # destroy the item
+    @work.destroy
+    # redirect to another url
+    respond_to do |format|
+      format.html { redirect_to works_url, notice: 'The work was successfully deleted.' }
+      format.json { head :no_content }
+    end
+  end
+  
 
 
 
