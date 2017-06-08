@@ -1,8 +1,14 @@
 <h1>Demo Work Items</h1>
 
-<% @work_items.each do |portfolio_item| %>
-<p><%= portfolio_item.title %></p>
-<p><%= portfolio_item.subtitle %></p>
-<p><%= portfolio_item.body %></p>
-<%= image_tag portfolio_item.thumb_image %>
-<% end %>
+<% @work_items.each do |work_item| %>
+    <p>
+        <%= work_item.title %>
+    </p>
+    <p>
+        <%= work_item.subtitle %>
+    </p>
+    <p>
+        <%= work_item.body %>
+    </p>
+    <%= image_tag work_item.thumb_image unless work_item.thumb_image.nil? %>
+        <% end %>

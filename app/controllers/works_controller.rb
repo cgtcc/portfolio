@@ -14,11 +14,9 @@ class WorksController < ApplicationController
     
     respond_to do |format|
       if @work.save
-        format.html { redirect_to @work, notice: 'Work item was successfully created!'}
-        format.json { render :show, status: :created, location: @work }
+        format.html { redirect_to works_path, notice: 'Work item was successfully created!'}
       else
         format.html { render :new }
-        format.json { render json: @work.errors, status: :unprocessable_entity }
       end
     end
   end
