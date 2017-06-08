@@ -14,5 +14,10 @@
             <p>
                 <%= link_to "Edit", edit_work_path(work_item.id) %>
             </p>
+
+            <p>
+                <%= link_to 'Delete portfolio item', work_path(work_item), method: :delete, data: { confirm: 'Are you sure?  This action cannot be reverted.' } %>
+            </p>
+
             <hr>
             <% end %>

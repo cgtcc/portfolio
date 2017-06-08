@@ -51,11 +51,10 @@ class WorksController < ApplicationController
     #perform the lookup
     @work_item = Work.find(params[:id])
     # destroy the item
-    @work.destroy
+    @work_item.destroy
     # redirect to another url
     respond_to do |format|
-      format.html { redirect_to works_url, notice: 'The work was successfully deleted.' }
-      format.json { head :no_content }
+      format.html { redirect_to works_url, notice: 'The work record was successfully removed.' }
     end
   end
   

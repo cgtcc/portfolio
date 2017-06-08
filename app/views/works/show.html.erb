@@ -1,4 +1,4 @@
-<%= image_tag @work_item.main_image %>
+<%= image_tag @work_item.main_image unless @work_item.main_image.nil? %>
 
 
     <h1>
