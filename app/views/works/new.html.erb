@@ -1,0 +1,22 @@
+<h1>Create a new demo work item</h1>
+
+<%= form_for(@work_item) do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :work_title %>
+  </div>
+
+<div class="field">
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle, id: :work_subtitle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :work_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
