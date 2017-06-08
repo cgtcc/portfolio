@@ -2,7 +2,7 @@
 <%=  link_to "Create new item", new_work_path %>
     <% @work_items.each do |work_item| %>
         <p>
-            <%= work_item.title %>
+            <%= link_to work_item.title, work_path(work_item.id) %>
         </p>
         <p>
             <%= work_item.subtitle %>

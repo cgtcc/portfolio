@@ -39,4 +39,11 @@ class WorksController < ApplicationController
       end
     end
   end
+
+  def show
+     @work_item = Work.find(params[:id])
+  end
+
+
+
 end
