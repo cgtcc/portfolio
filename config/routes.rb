@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
+# except: define exceptions in the ressource routes
   resources :works, except: [:show]
   get 'work/:id', to: 'works#show', as: 'work_show'
 
