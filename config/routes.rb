@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
-  resources :works
-  get 'pages/home'
+  # For details on the DSL available within this file, 
+  # see http://guides.rubyonrails.org/routing.html
 
-  get 'pages/about'
+  root to: 'pages#home'
 
-  get 'pages/contact'
-
+  resources :works, except: [:show]
+  get 'work:id', to: 'works#show'
+  
   resources :blogs
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-root to: 'pages#home'
+  get 'home', to: 'pages#home'
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
 
 end
