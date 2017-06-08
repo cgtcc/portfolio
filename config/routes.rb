@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :works, except: [:show]
-  get 'work:id', to: 'works#show'
-  
+  get 'work/:id', to: 'works#show', as: 'work_show'
+
   resources :blogs
 
   get 'home', to: 'pages#home'
