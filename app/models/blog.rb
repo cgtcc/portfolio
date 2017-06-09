@@ -5,4 +5,8 @@ class Blog < ApplicationRecord
   #for friendly url's
     extend FriendlyId
   friendly_id :title, use: :slugged
+
+  #validate blog variables
+  validate_presence_of :title, :body
+  
 end
