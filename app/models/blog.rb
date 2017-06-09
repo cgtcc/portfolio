@@ -7,6 +7,8 @@ class Blog < ApplicationRecord
   friendly_id :title, use: :slugged
 
   #validate blog variables
-  validate_presence_of :title, :body
+  validates_presence_of :title, :body
   
+  #blog posts belong to topic
+  belongs_to :topic
 end
