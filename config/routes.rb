@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   resources :works, except: [:show]
   get 'work/:id', to: 'works#show', as: 'work_show'
 
-  resources :blogs do #this function toggle status (published / draft) of blog posts (see index.html.erb)
+  resources :blogs do 
+    #this function toggle status (published / draft) of blog posts (see index.html.erb)
     member do
-      post :toggle_status
+      get :toggle_status
     end
   end
   
