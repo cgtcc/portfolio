@@ -1,4 +1,6 @@
 class WorksController < ApplicationController
+    before_action :set_work, only: [:show, :edit, :update, :destroy]
+
   def index
     @work_items = Work.all
   end
@@ -10,7 +12,7 @@ class WorksController < ApplicationController
  
 #create the work when form submitted
   def create
-    @work = Work.new(params.require(:work).permit(:title, :subtitle, :body))
+    @work = Work.new(work_params)
     
     respond_to do |format|
       if @work.save
@@ -22,14 +24,14 @@ class WorksController < ApplicationController
   end
 
   def edit
-    @work_item = Work.find(params[:id])
+    @work_item = set_work
   end
 
 
   # PATCH/PUT /works/1
   # PATCH/PUT /works/1.json
   def update
-    @work_item = Work.find(params[:id])
+    @work_item = set_work
 
     respond_to do |format|
       if @work_item.update(params.require(:work).permit(:title, :subtitle, :body))
@@ -41,7 +43,7 @@ class WorksController < ApplicationController
   end
 
   def show
-     @work_item = Work.find(params[:id])
+     @work_item = set_work
   end
 
 
@@ -49,7 +51,7 @@ class WorksController < ApplicationController
  
   def destroy
     #perform the lookup
-    @work_item = Work.find(params[:id])
+    @work_item = set_work
     # destroy the item
     @work_item.destroy
     # redirect to another url
@@ -59,6 +61,16 @@ class WorksController < ApplicationController
   end
   
 
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_work
+      @work = Work.friendly.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def work_params
+      params.require(:work).permit(:title, :subtitle, :body)
+    end
 
 
 end
