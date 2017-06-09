@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+  )
+end
+
 10.times do |x|
   Blog.create!(
     title: "My Blog Post #{x}",
@@ -13,7 +19,8 @@
 
 Morbi id varius metus. Pellentesque iaculis tempor pulvinar. Donec rhoncus leo ac elementum porttitor. Curabitur facilisis, justo sed pulvinar aliquet, neque risus placerat libero, faucibus tempus erat nulla id erat. Maecenas pellentesque massa eu orci lobortis tincidunt. Vestibulum faucibus lacus eget tincidunt sollicitudin. Duis id fringilla dui. Phasellus lacinia neque et placerat mattis. Vivamus orci augue, ultrices in mauris et, semper scelerisque ex.
 
-Nunc id mollis ex, et vulputate odio. In hac habitasse platea dictumst. Donec erat nunc, sagittis volutpat felis tristique, faucibus ornare metus. Integer rutrum maximus metus nec tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas at neque ultricies, aliquet leo et, varius metus. Nam convallis tellus nec ipsum commodo condimentum."
+Nunc id mollis ex, et vulputate odio. In hac habitasse platea dictumst. Donec erat nunc, sagittis volutpat felis tristique, faucibus ornare metus. Integer rutrum maximus metus nec tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas at neque ultricies, aliquet leo et, varius metus. Nam convallis tellus nec ipsum commodo condimentum.",
+topic_id: Topic.last.id
 
   )
 end
@@ -40,5 +47,7 @@ puts "5 demo skills posts created"
       thumb_image: "http://via.placeholder.com/350x200"
   )
 end
+
+
 
 puts "9 demo work portfolio items created"
