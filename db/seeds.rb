@@ -28,9 +28,9 @@ end
 
 puts "10 demo blog posts created"
 
-5.times do |y|
+5.times do |skills|
   Skill.create!(
-      title: "Rails #{y}",
+      title: "Rails #{skills}",
       percent_utilized: 15
   )
 end
@@ -41,13 +41,23 @@ puts "5 demo skills posts created"
 9.times do |z|
   Work.create!(
       title: "Portfolio title: #{z}",
-      subtitle: "Wonderful service subtitle goes here",
+      subtitle: "Ruby on Rails",
       body: "Maecenas pellentesque massa eu orci lobortis tincidunt. Vestibulum faucibus lacus eget tincidunt sollicitudin. Duis id fringilla dui. Phasellus lacinia neque et placerat mattis. Vivamus orci augue, ultrices in mauris et, semper scelerisque ex.",
       main_image: "http://via.placeholder.com/600x400",
       thumb_image: "http://via.placeholder.com/350x200"
   )
 end
 
+
+5.times do |z|
+  Work.create!(
+      title: "Portfolio title: #{z}",
+      subtitle: "Wonderful service subtitle goes here",
+      body: "Maecenas pellentesque massa eu orci lobortis tincidunt. Vestibulum faucibus lacus eget tincidunt sollicitudin. Duis id fringilla dui. Phasellus lacinia neque et placerat mattis. Vivamus orci augue, ultrices in mauris et, semper scelerisque ex.",
+      main_image: "http://via.placeholder.com/600x400",
+      thumb_image: "http://via.placeholder.com/350x200"
+  )
+end
 
 
 puts "9 demo work portfolio items created"
