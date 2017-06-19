@@ -1,4 +1,6 @@
 class Work < ApplicationRecord
+    has_many :technologies
+
     include Placeholder
 
     extend FriendlyId
