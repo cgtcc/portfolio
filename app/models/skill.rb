@@ -1,4 +1,5 @@
 class Skill < ApplicationRecord
+  includes Placeholder #see concerns/placeholder.rb
 
 
   #validate skill variables
@@ -10,7 +11,7 @@ class Skill < ApplicationRecord
 after_initialize :set_defaults
 
 def :set_defaults
-    self.badge ||= "http://via.placeholder.com/200x200"
+    self.badge ||= Placeholder.image_generator(height: '200', width: '200')
 end
 
 end
