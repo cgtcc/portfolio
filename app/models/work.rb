@@ -1,4 +1,6 @@
 class Work < ApplicationRecord
+    include Placeholder
+
     extend FriendlyId
   friendly_id :title, use: :slugged
 
