@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170619142843) do
+ActiveRecord::Schema.define(version: 20170619153355) do
 
   create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
@@ -44,6 +44,14 @@ ActiveRecord::Schema.define(version: 20170619142843) do
     t.text "badge"
   end
 
+  create_table "technologies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.bigint "work_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["work_id"], name: "index_technologies_on_work_id"
+  end
+
   create_table "topics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
     t.datetime "created_at", null: false
@@ -63,4 +71,5 @@ ActiveRecord::Schema.define(version: 20170619142843) do
   end
 
   add_foreign_key "blogs", "topics"
+  add_foreign_key "technologies", "works"
 end
