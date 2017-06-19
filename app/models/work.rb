@@ -10,8 +10,14 @@ def self.angular
     where(subtitle: 'Angular')
 end
 
-scope  :ruby_on_rails_work_items, ->{
-    where(subtitle: 'Wonderful service subtitle goes here')
-}
+
+#set default values for images (if empty)
+after_initialize :set_defaults
+
+def :set_defaults
+    self.main_image ||= "http://via.placeholder.com/600x400",
+    self.thumb_image ||= "http://via.placeholder.com/350x200"
+end
+
 
 end
