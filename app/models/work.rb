@@ -1,6 +1,7 @@
 class Work < ApplicationRecord
     has_many :technologies
-
+    accepts_nested_attributes_for :technologies,  #no technology is required in the form, we only validate if blank, since added automagically
+                                                                  reject_if: lambda { |x|  attrs['name'].blank? }  
     include Placeholder
 
     extend FriendlyId

@@ -63,7 +63,7 @@ end
 puts "9 demo work portfolio items created"
 
 3.times do |technologies|
-  Work.last.technology.create!(
+  Work.last.technologies.create!(
     name: "Technology #{technologies}",
   )
 end
