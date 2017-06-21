@@ -1,7 +1,7 @@
 class Work < ApplicationRecord
     has_many :technologies
     accepts_nested_attributes_for :technologies,  #no technology is required in the form, we only validate if blank, since added automagically
-                                                                  reject_if: lambda { |x|  attrs['name'].blank? }  
+                                                                  reject_if: lambda { |x|  x['name'].blank? }  
     #because of the previous line, we want nested items for technologies.  
     #Therefore, we can create a new Work item from console using this syntax  :
     # Work.create!(title: "title", subtitle: "subtitle", body: "body", technologies_attributes[{ name: "Ruby"'}, {  name: "Javascript"}, { name: "AngularJS"}, { name: "Ionic" }])
