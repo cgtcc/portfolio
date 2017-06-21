@@ -1,4 +1,5 @@
 
+<% #titleize - Capitalize every word in string: unicorn cake → Unicorn Cake.%>
 <h1><%= plural_table_name.titleize %></h1>
 
 <hr>
@@ -21,6 +22,5 @@
   </div>
 
 <br>
-<% #titleize - Capitalize every word in string: unicorn cake → Unicorn Cake.%>
 <%= link_to 'Create a new <%= singular_table_name.titleize %>', new_<%= singular_table_name %>_path 
 %>
