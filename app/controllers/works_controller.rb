@@ -8,6 +8,7 @@ class WorksController < ApplicationController
 #render the work form
   def new 
     @work_item = Work.new
+    #the following is for testing only and will get improved in future version.
     3.times { @work_item.technologies.build } #instanciate 3 types of technologies, and make it available to the form
   end
  
