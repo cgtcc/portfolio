@@ -61,3 +61,12 @@ end
 
 
 puts "9 demo work portfolio items created"
+
+3.times do |technologies|
+  Technology.create!(
+    name: "Technology #{technologies}",
+    portfolio_id: Portfolio.last.id
+  )
+end
+
+puts "3 technologies added to portfolio items"
