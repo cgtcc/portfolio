@@ -10,3 +10,8 @@
     <article>
         <%= @work_item.body %>
     </article>
+
+    <h2>Technologies used : </h2>
+    <% @work_item.technologies.each do |t| %>
+    <p><%= t.name %> </p>
+    <% end %>
