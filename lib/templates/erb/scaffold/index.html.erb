@@ -21,5 +21,6 @@
   </div>
 
 <br>
-
-<%= link_to 'Create a new <%= singular_table_name.titleize %>', new_<%= singular_table_name %>_path %>
+<% #titleize - Capitalize every word in string: unicorn cake → Unicorn Cake.%>
+<%= link_to 'Create a new <%= singular_table_name.titleize %>', new_<%= singular_table_name %>_path 
+%>
