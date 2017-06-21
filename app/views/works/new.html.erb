@@ -19,8 +19,8 @@
 
   <ul>
     <%= form.fields_for :technologies do  |x| %>
-      <li><%= technology_form.label :name %></li>
-      <li><%= technology_form.text_field :name %></li>
+      <li><%= x.label :name %></li>
+      <li><%= x.text_field :name %></li>
     <% end %>
  </ul>
 
