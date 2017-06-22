@@ -52,3 +52,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Custom added Friendly ID for friendly URL's
 gem 'friendly_id', '~> 5.1'
+
+#User management with Devise
+gem 'devise', '~> 4.2'
