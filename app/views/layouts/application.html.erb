@@ -27,5 +27,8 @@
 <% if Rails.env.eql?('development') %>
     <%= params.inspect %>
 <% end %>
+<% if Rails.env.eql?('test') %>
+    <%= params.inspect %>
+<% end %>
   </body>
 </html>
