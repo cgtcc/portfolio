@@ -24,7 +24,8 @@
     <%= yield %>
 
 <br><br><hr>
-
-        <%= params.inspect %>
+<% if Rails.env.eql?('development') %>
+    <%= params.inspect %>
+<% end %>
   </body>
 </html>
