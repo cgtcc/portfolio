@@ -6,7 +6,7 @@ module DeviseWhitelist
         before_filter :custom_form_params, if: :devise_controller?
     end
 
-    def :custom_form_params
+    def custom_form_params
         devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
         devise_parameter_sanitizer.permit(:account_update, keys: [:name])
     end
