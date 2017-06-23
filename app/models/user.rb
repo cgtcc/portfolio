@@ -6,6 +6,8 @@ class User < ApplicationRecord
          :confirmable
 
 
+         validates_presence_of :name
+
 
          def first_name
            self.name.split.first
