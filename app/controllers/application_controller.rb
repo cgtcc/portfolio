@@ -4,5 +4,11 @@ class ApplicationController < ActionController::Base
   include DeviseWhitelist
   include SetSource
 
+#overriding the current_user method
+#we want current user to be available even if current_user is not logged in
+  def current_user 
+    super #will never return NIL
+  end
+
 
 end
