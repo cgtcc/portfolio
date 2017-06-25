@@ -27,8 +27,10 @@ module Portfolio
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-
-    config.action_controller.permit_all_parameters = true
+    
+    #uncomment the following to trust parameters from the scary Internet.  
+    #for security reasons, you should only allow the white listed elements in the controler using params.require(:element)
+    #config.action_controller.permit_all_parameters = true
 
 #custom configuration items
 #config.generators do |g|
