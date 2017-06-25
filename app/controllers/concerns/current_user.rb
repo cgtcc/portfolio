@@ -1,7 +1,5 @@
 module CurrentUser
     extend ActiveSupport::Concern
-#this is a concern module for custom user and admin parameters in devise (see schema.rb file)
-#see http://www.rubydoc.info/github/plataformatec/devise/Devise/Controllers/Helpers
 included do
             before_action :set_source
 end
