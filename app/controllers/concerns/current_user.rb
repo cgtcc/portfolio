@@ -10,6 +10,7 @@ end
 # OpenStruct.new(name: "name", first_name: "first_name", last_name:"last name", email: "my@email.com")
 def current_user 
         #will never return NIL, create a fake user
+        #will return the super value (logged in user) OR the guest infos.
     super ||  OpenStruct.new(name: "Guest", first_name: "Guest", last_name: "Guest", email: "guest@unknow")
 end
 
