@@ -29,7 +29,7 @@ module Portfolio
     config.generators.system_tests = nil
     
     #uncomment the following to trust parameters from the scary Internet.  
-    #for security reasons, you should only allow the white listed elements in the controler using params.require(:element)
+    #for security reasons, you should only allow the white listed elements in the controller using params.require(:element)
     #config.action_controller.permit_all_parameters = true
 
 #custom configuration items
