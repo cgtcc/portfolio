@@ -23,9 +23,11 @@
 
     <%= yield %>
 
-<br><br><hr>
+<hr class="devseparator">
 <% if Rails.env.eql?('development') %>
-    <%= params.inspect %>
+    <p>View parameters : <%= params.inspect %></p>
+    <hr>
+    <p>Session parameters : <%= session.inspect %></p>
 <% end %>
 <% if Rails.env.eql?('test') %>
     <%= params.inspect %>
