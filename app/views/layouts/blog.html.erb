@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @page_title %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  
+    <% # required by devise %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+<% if current_user.is_a?(User) %>
+      <%= link_to "logout", destroy_user_session_path, method: :delete  %>
+    <% else %>
+      <%= link_to "login", new_user_session_path, method: :get  %>
+      <%= link_to "register", new_user_registration_path, method: :get  %>
+<% end %>
+
+    <%= yield %>
+
+
+    <div>
+      <div><%= link_to "Home", root_path %></div>
+      <div><%= link_to "About", about_path %></div>
+      <div><%= link_to "Contact", contact_path %></div>
+      <div><%= link_to "Blog", blogs_path %></div>
+      <div><%= link_to "Work", works_path %></div>
+    </div>
+
+
+
+    <% if session[:source] %>
+        <p>Thanks for visiting me from <%= session[:source] %></p>
+    <%end %>
+<hr class="devseparator">
+<% if Rails.env.eql?('development') %>
+    <p>View parameters : <%= params.inspect %></p>
+    <hr>
+    <p>Session parameters : <%= session.inspect %></p>
+<% end %>
+<% if Rails.env.eql?('test') %>
+    <%= params.inspect %>
+<% end %>
+  </body>
+</html>
