@@ -11,6 +11,14 @@
   <body>
   
 
+    <div>
+      <div><%= link_to "Home", root_path %></div>
+      <div><%= link_to "About", about_me_path %></div>
+      <div><%= link_to "Contact", contact_path %></div>
+      <div><%= link_to "Blog", blogs_path %></div>
+      <div><%= link_to "Portfolio", portfolios_path %></div>
+    </div>
+
     <% # required by devise %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
