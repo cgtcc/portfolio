@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   include CurrentUser
 
 
+def set_title
+  @page_title = "Portfolio | My Portfolio website"
+end
+
 end
