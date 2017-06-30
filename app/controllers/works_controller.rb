@@ -28,6 +28,8 @@ layout 'work'
 
   def edit
     @work_item = set_work
+        3.times { @work_item.technologies.build } #instanciate 3 types of technologies, and make it available to the form
+
   end
 
 
