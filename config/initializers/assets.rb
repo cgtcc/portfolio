@@ -15,3 +15,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 #Add multiple layout themes
 Rails.application.config.assets.precompile += %w( blogs.css )
+Rails.application.config.assets.precompile += %w( works.css )
