@@ -17,7 +17,7 @@
 
 
   <ul>
-    <% form.fields_for :technologies do  |x| %>
+    <%= form.fields_for :technologies do  |x| %>
       <li><%= x.label :name %></li>
       <li><%= x.text_field :name %></li>
     <% end %>
