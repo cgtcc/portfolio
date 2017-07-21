@@ -1,0 +1,19 @@
+        <p>
+            <%= link_to work_item.title, work_show_path(work_item) %>
+        </p>
+        <p>
+            <%= work_item.subtitle %>
+        </p>
+        <p>
+            <%= work_item.body %>
+        </p>
+        <%= image_tag work_item.thumb_image unless work_item.thumb_image.nil? %>
+            <p>
+                <%= link_to "Edit", edit_work_path(work_item.id) %>
+            </p>
+
+            <p>
+                <%= link_to 'Delete portfolio item', work_path(work_item), method: :delete, data: { confirm: 'Are you sure?  This action cannot be reverted.' } %>
+            </p>
+
+            <hr>
