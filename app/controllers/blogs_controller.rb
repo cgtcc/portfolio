@@ -8,8 +8,8 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.published + Blog.draft
     @page_title = "Portfolio Blog"
-
-  end
+ 
+ end
 
   # GET /blogs/1
   # GET /blogs/1.json

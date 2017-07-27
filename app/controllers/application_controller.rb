@@ -5,5 +5,5 @@ class ApplicationController < ActionController::Base
   include SetSource
   include CurrentUser
   include SetTitle
-  
+  #byebug
 end
