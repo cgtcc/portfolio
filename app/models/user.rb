@@ -23,7 +23,7 @@ def get_facebook_messages
   begin
     contacts_fb
     @messages=retrieves_messages
-  rescue => e #see https://ruby-doc.org/core-2.2.0/Exception.html
+  rescue IOErrors => e #see https://ruby-doc.org/core-2.2.0/Exception.html
   begin
     flash[:error] = "Error occured contacting Facebook: #{e}"
 end
