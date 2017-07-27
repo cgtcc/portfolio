@@ -2,11 +2,11 @@
 
 <h1>Blogs</h1>
 
-
+<% cache do %>
   <div>
-    <%= render partial: @blogs, spacer_template: 'blog_ruler' %>
-      
+    <%= render partial: @blogs, spacer_template: 'blog_ruler'%>   
   </div>
+<% end %>
 
 <br>
 
