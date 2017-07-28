@@ -8,6 +8,9 @@ end
 # Boostrap css 4 (alpha version at this time)
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
+# jQuery 
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use mysql as the database for Active Record
