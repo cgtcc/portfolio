@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Petergate - see : https://github.com/elorest/petergate
+# required for authorizations with devise, or any other model called User and defined in defined in app/models/user.rb 
 gem 'petergate'
 
 
