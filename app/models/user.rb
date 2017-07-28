@@ -17,14 +17,7 @@ class User < ApplicationRecord
            self.name.split.last
          end
 
-       end
+    
+end
 
-def get_facebook_messages
-  begin
-    contacts_fb
-    @messages=retrieves_messages
-  rescue IOErrors => e #see https://ruby-doc.org/core-2.2.0/Exception.html
-  begin
-    flash[:error] = "Error occured contacting Facebook: #{e}"
-end
-end
+
