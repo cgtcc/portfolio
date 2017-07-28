@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Petergate - see : https://github.com/elorest/petergate
+gem 'petergate'
+
+
 # Boostrap css 4 (alpha version at this time)
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
