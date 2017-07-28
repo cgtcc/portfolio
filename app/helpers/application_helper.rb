@@ -16,5 +16,11 @@ module ApplicationHelper
       end
     end
 
+    def copyright 
+      msg = "My Company"
+      @copyright = "&copy; #{Time.now.year} | <b>#{msg}".html_safe
+    end
+
+
     
 end
