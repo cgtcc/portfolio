@@ -1,11 +1,12 @@
 module ApplicationHelper
     def login_helper
-         if current_user.is_a?(User) 
-            link_to "logout", destroy_user_session_path, method: :delete  
-            else 
+       #  if current_user.is_a?(User) #OpenStruct Method
+       if current_user.is_a?(GuestUser)
             (link_to "login", new_user_session_path, method: :get  ) +
             "<br />".html_safe +
             (link_to "register", new_user_registration_path, method: :get)  
+            else 
+            link_to "logout", destroy_user_session_path, method: :delete  
          end
     end
 
