@@ -15,12 +15,13 @@ end
       end
 
       def guest_user
-       # OpenStruct.new(name: "Guest", 
+       #refactored so we can use ActiveRecords / Petergate
+       # Was previously using OpenStruct:
+       #                                   OpenStruct.new(name: "Guest", 
        #                                   first_name: "Guest", 
        #                                   last_name: "Guest", 
        #                                   email: "guest@unknow"
        #                                   )
-
        guest = GuestUser.new
        guest.name = "Guest User"
        guest.first_name = "Guest"
