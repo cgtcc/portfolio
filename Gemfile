@@ -66,3 +66,6 @@ gem 'friendly_id', '~> 5.1'
 
 #User management with Devise
 gem 'devise', '~> 4.2'
+
+# Windows Gem requirement
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
