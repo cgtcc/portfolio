@@ -1,25 +1,15 @@
-# README
+# Readme - installation instruction
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###Instructions for the backend (assuming you are running on localhost) : 
 
-Things i will cover here (soon)
+    bundle install
 
-* Ruby version
+    rails db:create
 
-* System dependencies
+    rails db:install
 
-* Configuration
+    bundle exec rake db:setup
 
-* Database creation
+then run the server : 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# portfolio
+    rails s -p 3003
